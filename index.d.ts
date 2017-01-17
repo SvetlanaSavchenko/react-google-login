@@ -6,13 +6,13 @@ import {Component, ReactNode, CSSProperties} from 'react';
 declare namespace ReactGoogleLogin {
 
   interface AuthResponse {
-    readonly access_token: string;
-    readonly id_token: string;
-    readonly login_hint: string;
-    readonly scope: string;
-    readonly expires_in: number;
-    readonly first_issued_at: number;
-    readonly expires_at: number;
+     access_token: string;
+     id_token: string;
+     login_hint: string;
+     scope: string;
+     expires_in: number;
+     first_issued_at: number;
+     expires_at: number;
   }
 
   interface BasicProfile {
@@ -40,38 +40,38 @@ declare namespace ReactGoogleLogin {
   }
 
   interface GrantOfflineAccessOptions {
-    readonly scope?: string;
-    readonly redirect_uri?: string;
+     scope?: string;
+     redirect_uri?: string;
   }
 
   interface SignInOptions {
-    readonly scope?: string;
-    readonly app_package_name?: string;
-    readonly fetch_basic_profile?: boolean;
-    readonly prompt?: string;
+     scope?: string;
+     app_package_name?: string;
+     fetch_basic_profile?: boolean;
+     prompt?: string;
   }
 
   export interface GoogleLoginResponseOffline {
-    readonly code: string;
+     code: string;
   }
 
   export interface GoogleLoginProps {
-    readonly onSuccess: (response: GoogleLoginResponse | GoogleLoginResponseOffline) => void,
-    readonly onFailure: (error: any) => void,
-    readonly clientId: string,
-    readonly onRequest?: () => void,
-    readonly buttonText?: string,
-    readonly offline?: boolean,
-    readonly scope?: string,
-    readonly className?: string,
-    readonly redirectUri?: string,
-    readonly cookiePolicy?: string,
-    readonly loginHint?: string,
-    readonly hostedDomain?: string,
-    readonly children?: ReactNode,
-    readonly style?: CSSProperties,
-    readonly approvalPrompt?: string,
-    readonly tag?: string;
+     onSuccess: (response: GoogleLoginResponse | GoogleLoginResponseOffline) => void,
+     onFailure: (error: any) => void,
+     clientId: string,
+     onRequest?: () => void,
+     buttonText?: string,
+     offline?: boolean,
+     scope?: string,
+     className?: string,
+     redirectUri?: string,
+     cookiePolicy?: string,
+     loginHint?: string,
+     hostedDomain?: string,
+     children?: ReactNode,
+     style?: CSSProperties,
+     approvalPrompt?: string,
+     tag?: string;
   }
 
   export default class GoogleLogin extends Component<GoogleLoginProps, {}> {
